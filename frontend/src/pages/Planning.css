@@ -1,0 +1,121 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --sidebar-blue: #1e3a8a;
+}
+
+.planning-wrapper {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.premium-tab {
+  font-weight: 600 !important;
+  text-transform: none !important;
+  font-size: 0.95rem !important;
+  min-height: 64px !important;
+}
+
+.wbs-table-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.wbs-header {
+  background: rgba(241, 245, 249, 0.8) !important;
+  font-weight: 700 !important;
+  color: #475569 !important;
+}
+
+.wbs-row {
+  transition: all 0.2s ease !important;
+}
+
+.wbs-row:hover {
+  background-color: rgba(241, 245, 249, 0.5) !important;
+}
+
+/* Gantt Improvements */
+.gantt-chart-container {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+.gantt-header {
+  height: 50px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.gantt-grid {
+  border-right: 1px solid #f1f5f9;
+}
+
+.gantt-grid.weekend {
+  background: #f8fafc;
+}
+
+.gantt-bar-premium {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none !important;
+}
+
+.gantt-bar-premium:hover {
+  transform: scaleY(1.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.gantt-today-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ef4444;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.gantt-today-label {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.status-chip {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 0.7rem !important;
+}
